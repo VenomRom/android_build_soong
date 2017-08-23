@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"lineage/soong/android"
+	"venom/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -117,8 +117,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include Lineage variables
-		Lineage android.Product_variables
+		// include OS variables
+		Venom android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -236,8 +236,8 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
-	// include Lineage variables
-	Lineage android.ProductVariables
+	// include OS variables
+        Venom android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
